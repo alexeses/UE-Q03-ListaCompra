@@ -1,7 +1,6 @@
 package com.github.alexeses.gui;
 
 import com.github.alexeses.controlador.ListaCompraControlador;
-import com.github.alexeses.model.ListaCompra;
 import com.github.alexeses.model.Producto;
 
 import javax.swing.*;
@@ -18,6 +17,8 @@ public class VentanaCompra extends JFrame {
     private JLabel jblUnidad;
     private JScrollPane scrollPanel;
     private JPanel mainMenu;
+    private JButton btnSee;
+    private JButton btnRemove;
 
     public VentanaCompra() {
         setContentPane(mainMenu);
@@ -30,6 +31,8 @@ public class VentanaCompra extends JFrame {
 
     public void setControlador(ListaCompraControlador controlador) {
         btnOK.addActionListener(controlador);
+        btnSee.addActionListener(controlador);
+        btnRemove.addActionListener(controlador);
     }
 
     public Producto obtenerListaCompra() {
@@ -70,11 +73,19 @@ public class VentanaCompra extends JFrame {
             productos += producto + "\n";
         }
 
-        // Titulo lista de compras
         txtLista.setText("=== Lista de compra ===\n\n");
         txtLista.append(productos);
 
-        //txtLista.setText(productos);
-
     }
+
+    public void limpiarTxt(){
+        txtNombre.setText("");
+        spnCantidad.setValue(1);
+        cbxUnidad.setSelectedIndex(0);
+    }
+
+    public String getProductName() {
+        return txtNombre.getText();
+    }
+
 }

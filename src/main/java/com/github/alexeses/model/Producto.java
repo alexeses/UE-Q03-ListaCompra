@@ -1,7 +1,5 @@
 package com.github.alexeses.model;
 
-import com.github.alexeses.gui.VentanaCompra;
-
 public class Producto {
 
     private String nombre;
@@ -20,5 +18,9 @@ public class Producto {
         return  "  Nombre producto: " + nombre + "\n" +
                 "  Cantidad: " + cantidad + "\n" +
                 "  Unidades " + unidades;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 }

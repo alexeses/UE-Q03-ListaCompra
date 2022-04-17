@@ -18,10 +18,13 @@ public class ListaCompra {
         listaProductos.add(p);
     }
 
-    // Comprobar si en listaProductos tiene al menos uno o mas productos
-    public static boolean isEmpty() {
-        return listaProductos.isEmpty();
+    public void removeProducto(String nombre) {
+        for (Producto p : listaProductos) {
+            if (p.getNombre().equals(nombre)) {
+                listaProductos.remove(p);
+                break;
+            }
+        }
     }
-
 
 }
