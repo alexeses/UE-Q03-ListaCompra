@@ -70,7 +70,11 @@ public class VentanaCompra extends JFrame {
             productos += producto + "\n";
         }
 
-        txtLista.setText(productos);
+        // Titulo lista de compras
+        txtLista.setText("=== Lista de compra ===\n\n");
+        txtLista.append(productos);
+
+        //txtLista.setText(productos);
 
     }
 }

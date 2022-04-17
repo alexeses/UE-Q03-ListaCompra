@@ -1,5 +1,7 @@
 package com.github.alexeses.model;
 
+import com.github.alexeses.gui.VentanaCompra;
+
 public class Producto {
 
     private String nombre;
@@ -14,8 +16,8 @@ public class Producto {
 
     @Override
     public String toString() {
-        return "=== TU LISTA DE LA COPRA ===\n" +
-                "  Nombre producto: '" + nombre + "'\n" +
+
+        return  "  Nombre producto: " + nombre + "\n" +
                 "  Cantidad: " + cantidad + "\n" +
                 "  Unidades " + unidades;
     }

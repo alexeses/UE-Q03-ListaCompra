@@ -27,13 +27,9 @@ public class ListaCompraControlador implements ActionListener, ItemListener {
 
         if (e.getSource() instanceof JButton) {
             if (e.getActionCommand().equals("Añadir")) {
-                System.out.println("A");
                 Producto producto = ventana.obtenerListaCompra();
                 listaCompra.addProducto(producto);
-                System.out.println(producto);
                 ventana.mostrarLista(listaCompra.getListado());
-                System.out.println("C");
-
             }
         }
 

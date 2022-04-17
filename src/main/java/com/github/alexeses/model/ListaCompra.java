@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ListaCompra {
 
-    private ArrayList<Producto> listaProductos;
+    private static ArrayList<Producto> listaProductos;
 
     public ListaCompra(){
         listaProductos = new ArrayList<>();
@@ -17,5 +17,11 @@ public class ListaCompra {
     public void addProducto(Producto p) {
         listaProductos.add(p);
     }
+
+    // Comprobar si en listaProductos tiene al menos uno o mas productos
+    public static boolean isEmpty() {
+        return listaProductos.isEmpty();
+    }
+
 
 }
